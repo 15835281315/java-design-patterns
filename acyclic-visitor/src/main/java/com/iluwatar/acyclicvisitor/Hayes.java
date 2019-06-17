@@ -22,11 +22,14 @@
  */
 package com.iluwatar.acyclicvisitor;
 
+import com.iluwatar.acyclicvisitor.interfaces.HayesVisitor;
+import com.iluwatar.acyclicvisitor.interfaces.ModemVisitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Hayes class implements its accept method
+ * Hayes类实现了Modem的accept方法
  */
 public class Hayes extends Modem {
   
@@ -34,6 +37,7 @@ public class Hayes extends Modem {
 
   /**
    * Accepts all visitors but honors only HayesVisitor
+   * 接受所有访客，但只使用HayesVisitor
    */
   @Override
   public void accept(ModemVisitor modemVisitor) {
@@ -41,6 +45,7 @@ public class Hayes extends Modem {
       ((HayesVisitor) modemVisitor).visit(this);
     } else {
       LOGGER.info("Only HayesVisitor is allowed to visit Hayes modem");
+      LOGGER.info("“只有HayesVisitor被允许访问Hayes调制解调器”");
     }
 
   }

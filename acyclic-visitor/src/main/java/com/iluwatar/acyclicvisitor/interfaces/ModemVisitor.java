@@ -20,12 +20,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.acyclicvisitor;
+package com.iluwatar.acyclicvisitor.interfaces;
 
 /**
- * All ModemVisitor interface extends all visitor interfaces. This interface
- * provides ease of use when a visitor needs to visit all modem types.
+ * ModemVisitor interface does not contain any visit methods so that it does not
+ * depend on the visited hierarchy. Each derivative's visit method is declared in 
+ * its own visitor interface
+ *
+ * ModemVisitor(调制调节器访问)接口不包含任何访问方法，因此它不依赖于被访问的层次结构。
+ * 每个派生的访问方法在*中声明自己的访问者接口
  */
-public interface AllModemVisitor extends ZoomVisitor, HayesVisitor{
-
+public interface ModemVisitor {
+  // Visitor is a degenerate base class for all visitors.
 }

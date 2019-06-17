@@ -29,10 +29,7 @@ import static org.mockito.Mockito.mock;
 
 import org.junit.jupiter.api.Test;
 
-import com.iluwatar.acyclicvisitor.ConfigureForDosVisitor;
-import com.iluwatar.acyclicvisitor.ConfigureForUnixVisitor;
-import com.iluwatar.acyclicvisitor.Zoom;
-import com.iluwatar.acyclicvisitor.ZoomVisitor;
+import com.iluwatar.acyclicvisitor.interfaces.ZoomVisitor;
 
 /**
  * Zoom test class

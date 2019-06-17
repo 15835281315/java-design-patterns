@@ -20,11 +20,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.acyclicvisitor;
+package com.iluwatar.acyclicvisitor.interfaces;
+
 
 /**
- * ZoomVisitor interface
+ * All ModemVisitor interface extends all visitor interfaces. This interface
+ * provides ease of use when a visitor needs to visit all modem types.
+ *
+ * All ModemVisitor接口扩展了所有访问者接口。
+ * 当访问者需要访问所有调制解调器类型时，该接口提供了易用性。
+ *
  */
-public interface ZoomVisitor extends ModemVisitor {
-  void visit(Zoom zoom);
+public interface AllModemVisitor extends ZoomVisitor, HayesVisitor {
+
 }

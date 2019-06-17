@@ -20,11 +20,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.acyclicvisitor;
+package com.iluwatar.acyclicvisitor.interfaces;
+
+import com.iluwatar.acyclicvisitor.Zoom;
+import com.iluwatar.acyclicvisitor.interfaces.ModemVisitor;
 
 /**
- * HayesVisitor interface
+ * ZoomVisitor interface
+ * 变焦 访问
  */
-public interface HayesVisitor extends ModemVisitor {
-  void visit(Hayes hayes);
+public interface ZoomVisitor extends ModemVisitor {
+  void visit(Zoom zoom);
 }

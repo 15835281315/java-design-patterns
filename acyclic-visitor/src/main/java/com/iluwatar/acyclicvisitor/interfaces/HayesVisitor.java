@@ -20,13 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.acyclicvisitor;
+package com.iluwatar.acyclicvisitor.interfaces;
+
+import com.iluwatar.acyclicvisitor.Hayes;
 
 /**
- * ModemVisitor interface does not contain any visit methods so that it does not
- * depend on the visited hierarchy. Each derivative's visit method is declared in 
- * its own visitor interface
+ * HayesVisitor interface
+ * 海斯 访问
  */
-public interface ModemVisitor {
-  // Visitor is a degenerate base class for all visitors.
+public interface HayesVisitor extends ModemVisitor {
+  void visit(Hayes hayes);
 }

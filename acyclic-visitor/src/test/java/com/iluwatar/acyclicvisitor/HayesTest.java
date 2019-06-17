@@ -29,10 +29,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 
 import org.junit.jupiter.api.Test;
 
-import com.iluwatar.acyclicvisitor.ConfigureForDosVisitor;
-import com.iluwatar.acyclicvisitor.ConfigureForUnixVisitor;
-import com.iluwatar.acyclicvisitor.Hayes;
-import com.iluwatar.acyclicvisitor.HayesVisitor;
+import com.iluwatar.acyclicvisitor.interfaces.HayesVisitor;
 
 /**
  * Hayes test class

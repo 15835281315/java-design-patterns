@@ -22,8 +22,10 @@
  */
 package com.iluwatar.acyclicvisitor;
 
+import com.iluwatar.acyclicvisitor.interfaces.ModemVisitor;
+
 /**
- * Modem abstract class
+ * Modem(调制调节器) abstract class
  */
 public abstract class Modem {
   public abstract void accept(ModemVisitor modemVisitor);

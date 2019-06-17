@@ -22,11 +22,14 @@
  */
 package com.iluwatar.acyclicvisitor;
 
+import com.iluwatar.acyclicvisitor.interfaces.ModemVisitor;
+import com.iluwatar.acyclicvisitor.interfaces.ZoomVisitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Zoom class implements its accept method
+ * Zoom类实现了Modem的accept方法
  */
 public class Zoom extends Modem {
   
@@ -37,10 +40,11 @@ public class Zoom extends Modem {
    */
   @Override
   public void accept(ModemVisitor modemVisitor) {
-    if (modemVisitor instanceof  ZoomVisitor) {
+    if (modemVisitor instanceof ZoomVisitor) {
       ((ZoomVisitor) modemVisitor).visit(this);
     } else {
       LOGGER.info("Only ZoomVisitor is allowed to visit Zoom modem");
+      LOGGER.info("(“只允许ZoomVisitor访问Zoom modem”)");
     }
   }
   

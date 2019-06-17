@@ -30,12 +30,6 @@ import static uk.org.lidalia.slf4jext.Level.INFO;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import com.iluwatar.acyclicvisitor.ConfigureForDosVisitor;
-import com.iluwatar.acyclicvisitor.Hayes;
-import com.iluwatar.acyclicvisitor.HayesVisitor;
-import com.iluwatar.acyclicvisitor.Zoom;
-import com.iluwatar.acyclicvisitor.ZoomVisitor;
-
 import uk.org.lidalia.slf4jtest.TestLogger;
 import uk.org.lidalia.slf4jtest.TestLoggerFactory;
 
