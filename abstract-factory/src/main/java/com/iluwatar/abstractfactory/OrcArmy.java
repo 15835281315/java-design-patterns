@@ -22,9 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.Army;
+
 /**
  * 
- * OrcArmy
+ * OrcArmy(兽人军队)
  *
  */
 public class OrcArmy implements Army {

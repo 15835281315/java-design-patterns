@@ -33,6 +33,6 @@ public class AppTest {
   @Test
   public void test() throws IOException {
     String[] args = {};
-    App.main(args);
+    Kingdom.main(args);
   }
 }

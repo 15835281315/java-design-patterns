@@ -22,21 +22,29 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.Army;
+import com.iluwatar.abstractfactory.interfaces.Castle;
+import com.iluwatar.abstractfactory.interfaces.King;
+import com.iluwatar.abstractfactory.interfaces.KingdomFactory;
+
 /**
  * 
- * ElfKingdomFactory concrete factory.
+ * ElfKingdomFactory(精灵王国工厂) concrete factory.
  * 
  */
 public class ElfKingdomFactory implements KingdomFactory {
 
+  @Override
   public Castle createCastle() {
     return new ElfCastle();
   }
 
+  @Override
   public King createKing() {
     return new ElfKing();
   }
 
+  @Override
   public Army createArmy() {
     return new ElfArmy();
   }

@@ -25,9 +25,10 @@ package com.iluwatar.abstractfactory;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.iluwatar.abstractfactory.App.FactoryMaker;
-import com.iluwatar.abstractfactory.App.FactoryMaker.KingdomType;
+import com.iluwatar.abstractfactory.Kingdom.FactoryMaker;
+import com.iluwatar.abstractfactory.Kingdom.FactoryMaker.KingdomType;
 
+import com.iluwatar.abstractfactory.interfaces.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -36,23 +37,32 @@ import org.junit.jupiter.api.Test;
  */
 public class AbstractFactoryTest {
 
-  private App app = new App();
+  private Kingdom app = new Kingdom();
   private KingdomFactory elfFactory;
   private KingdomFactory orcFactory;
 
   @BeforeEach
   public void setUp() {
+    //创建精灵工厂
     elfFactory = FactoryMaker.makeFactory(KingdomType.ELF);
+    //创建兽人工厂
     orcFactory = FactoryMaker.makeFactory(KingdomType.ORC);
   }
 
   @Test
   public void king() {
+    //app为当前王国,设置当前王国的国王为精灵族
     final King elfKing = app.getKing(elfFactory);
+    //判断app的当前国王是否是精灵国王
     assertTrue(elfKing instanceof ElfKing);
+    //判断app的当前国王的描述是否是精灵国王的描述
     assertEquals(ElfKing.DESCRIPTION, elfKing.getDescription());
+
+    //app为当前王国,设置当前王国的国王为兽人族
     final King orcKing = app.getKing(orcFactory);
+    //判断app的当前国王是否是兽人国王
     assertTrue(orcKing instanceof OrcKing);
+    //判断app的当前国王的描述是否是兽人国王的描述
     assertEquals(OrcKing.DESCRIPTION, orcKing.getDescription());
   }
 
@@ -78,6 +88,7 @@ public class AbstractFactoryTest {
 
   @Test
   public void createElfKingdom() {
+    //app为当前王国,设置当前王国的统治者为精灵族
     app.createKingdom(elfFactory);
     final King king = app.getKing();
     final Castle castle = app.getCastle();

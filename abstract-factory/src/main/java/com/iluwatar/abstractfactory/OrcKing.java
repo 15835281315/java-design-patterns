@@ -22,9 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.King;
+
 /**
  * 
- * OrcKing
+ * OrcKing(兽人国王)
  *
  */
 public class OrcKing implements King {

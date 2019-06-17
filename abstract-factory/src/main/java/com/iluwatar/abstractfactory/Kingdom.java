@@ -22,10 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.iluwatar.abstractfactory.App.FactoryMaker.KingdomType;
+import com.iluwatar.abstractfactory.Kingdom.FactoryMaker.KingdomType;
 
 /**
  * 
@@ -36,22 +37,33 @@ import com.iluwatar.abstractfactory.App.FactoryMaker.KingdomType;
  * factories, since it uses only the generic interfaces of their products. This pattern separates the details of
  * implementation of a set of objects from their general usage and relies on object composition, as object creation is
  * implemented in methods exposed in the factory interface.
+ *
  * <p>
  * The essence of the Abstract Factory pattern is a factory interface ({@link KingdomFactory}) and its implementations (
  * {@link ElfKingdomFactory}, {@link OrcKingdomFactory}). The example uses both concrete implementations to create a
  * king, a castle and an army.
- * 
+ *
+ * 将对象与对象之间的关系抽象出来
+ *
+ * 译文
+ * 抽象工厂模式提供了一种方法来封装一组具有公共主题的单独工厂，而无需指定它们的具体类。
+ * 在通常情况下，客户端软件创建抽象工厂的具体实现，然后使用工厂的通用接口创建主题的具体对象。
+ * 客户机不知道(或不关心)它从这些内部工厂中获得哪些具体对象，因为它只使用它们产品的通用接口。
+ * 此模式将一组对象的细节或实现与其一般用法分离开来，并依赖于对象组合，因为对象创建是在工厂接口中公开的方法中实现的
+ *
+ * 抽象工厂模式的本质是一个工厂接口(({@link KingdomFactory})及其实现{@link ElfKingdomFactory}, {@link OrcKingdomFactory}).。
+ * 该示例同时使用了具体的实现来创建国王、城堡和军队。
  */
-public class App {
+public class Kingdom {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Kingdom.class);
 
   private King king;
   private Castle castle;
   private Army army;
 
   /**
-   * Creates kingdom
+   * 创建王国
    */
   public void createKingdom(final KingdomFactory factory) {
     setKing(factory.createKing());
@@ -96,19 +108,19 @@ public class App {
   }
 
   /**
-   * The factory of kingdom factories.
+   * 创建王国工厂的工厂(工厂生产者)
    */
   public static class FactoryMaker {
 
     /**
-     * Enumeration for the different types of Kingdoms.
+     * 枚举不同类型的王国。
      */
     public enum KingdomType {
       ELF, ORC
     }
 
     /**
-     * The factory method to create KingdomFactory concrete objects.
+     * 。创建 KingdomFactory 具体对象的工厂方法。
      */
     public static KingdomFactory makeFactory(KingdomType type) {
       switch (type) {
@@ -130,7 +142,7 @@ public class App {
    */
   public static void main(String[] args) {
 
-    App app = new App();
+    Kingdom app = new Kingdom();
 
     LOGGER.info("Elf Kingdom");
     app.createKingdom(FactoryMaker.makeFactory(KingdomType.ELF));

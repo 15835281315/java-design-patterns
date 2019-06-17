@@ -20,19 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.interfaces;
 
 /**
  * 
- * KingdomFactory factory interface.
- * 
+ * Army(军队) interface
+ *
  */
-public interface KingdomFactory {
-
-  Castle createCastle();
-
-  King createKing();
-
-  Army createArmy();
-
+public interface Army {
+  //获取描述
+  String getDescription();
 }

@@ -22,9 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.King;
+
 /**
  * 
- * ElfKing
+ * ElfKing(精灵国王)
  *
  */
 public class ElfKing implements King {

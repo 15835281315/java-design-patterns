@@ -20,14 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.interfaces;
 
 /**
  * 
- * Army interface
+ * king(国王) interface
  *
  */
-public interface Army {
-
+public interface King {
+  //获取描述
   String getDescription();
 }

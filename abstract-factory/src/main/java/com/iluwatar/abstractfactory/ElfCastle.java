@@ -22,9 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.Castle;
+
 /**
- * 
- * ElfCastle
+ *
+ * ElfCastle(精灵堡垒)
  *
  */
 public class ElfCastle implements Castle {

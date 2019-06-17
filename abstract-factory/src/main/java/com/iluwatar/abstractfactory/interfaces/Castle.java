@@ -20,14 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.interfaces;
 
 /**
  * 
- * Castle interface
+ * Castle(堡垒) interface
  *
  */
 public interface Castle {
-
+  //获取描述
   String getDescription();
 }

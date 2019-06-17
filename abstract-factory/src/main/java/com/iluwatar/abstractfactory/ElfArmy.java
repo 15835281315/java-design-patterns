@@ -22,9 +22,11 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.Army;
+
 /**
  * 
- * ElfArmy
+ * ElfArmy(精灵军队)
  *
  */
 public class ElfArmy implements Army {

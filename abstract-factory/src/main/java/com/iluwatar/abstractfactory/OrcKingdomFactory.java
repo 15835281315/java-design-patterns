@@ -22,21 +22,29 @@
  */
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.interfaces.Army;
+import com.iluwatar.abstractfactory.interfaces.Castle;
+import com.iluwatar.abstractfactory.interfaces.King;
+import com.iluwatar.abstractfactory.interfaces.KingdomFactory;
+
 /**
  * 
- * OrcKingdomFactory concrete factory.
+ * OrcKingdomFactory(兽人王国工厂) concrete factory.
  * 
  */
 public class OrcKingdomFactory implements KingdomFactory {
 
+  @Override
   public Castle createCastle() {
     return new OrcCastle();
   }
 
+  @Override
   public King createKing() {
     return new OrcKing();
   }
 
+  @Override
   public Army createArmy() {
     return new OrcArmy();
   }
