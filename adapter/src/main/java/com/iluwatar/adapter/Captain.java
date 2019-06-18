@@ -25,6 +25,8 @@ package com.iluwatar.adapter;
 /**
  * The Captain uses {@link RowingBoat} to sail. <br>
  * This is the client in the pattern.
+ *
+ * 船长使用链板划艇航行。<br> "这是模式中的客户机。
  */
 public class Captain {
 

@@ -44,7 +44,21 @@ package com.iluwatar.adapter;
  * captain needs a rowing boat which he can operate. The spec is in {@link RowingBoat}. We will
  * use the Adapter pattern to reuse {@link FishingBoat}.
  *
+ * 译文
+ * 适配器帮助两个不兼容的接口一起工作。对于适配器，这是一个非常棒的定义。
+ * 接口可能是不兼容的，但是内部功能应该满足需要。适
+ * 配器设计模式通过将一个类的接口转换为客户端期望的接口，允许其他不兼容的类一起工作
+ *
+ * 适配器模式有两种变体:类适配器实现适配器的接口，而对象适配器使用组合在适配器对象中包含适配器。本例使用对象适配器方法。
+ *
+ * 适配器({@link FishingBoatAdapter})将adaptee类{@link FishingBoat})的接口转换为客户机期望的合适接口( {@link RowingBoat} )。
+ *
+ * 海盗来了!我们需要一个[@link划艇]逃跑!我们有一个{@link FishingBoat}和我们的
+ * 队长。我们没有时间造一艘新船!我们需要重用这个{@link FishingBoat}。的
+ * 船长需要一条他能操作的划艇。规范在{@link RowingBoat}中。我们将
+ * 使用适配器模式重用{@link FishingBoat}。
  */
+
 public class App {
 
   /**
