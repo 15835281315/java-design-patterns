@@ -27,12 +27,12 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 /**
- * Document interface
+ * 文档接口
  */
 public interface Document {
 
   /**
-   * Puts the value related to the key
+   * 将值与key关联
    *
    * @param key   element key
    * @param value element value
@@ -41,7 +41,7 @@ public interface Document {
   Void put(String key, Object value);
 
   /**
-   * Gets the value for the key
+   * 获取key的值
    *
    * @param key element key
    * @return value or null
@@ -49,7 +49,7 @@ public interface Document {
   Object get(String key);
 
   /**
-   * Gets the stream of child documents
+   * 获取子文档流
    *
    * @param key         element key
    * @param constructor constructor of child class

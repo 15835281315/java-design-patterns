@@ -35,14 +35,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The Abstract Document pattern enables handling additional, non-static
- * properties. This pattern uses concept of traits to enable type safety and
- * separate properties of different classes into set of interfaces.
+ * 抽象文档模式支持处理附加的非静态属性。
+ * 此模式使用特征的概念来启用类型安全性，
+ * 并将不同类的属性分离到一组接口中。
  * <p>
  * <p>
  * In Abstract Document pattern,({@link AbstractDocument}) fully implements
  * {@link Document}) interface. Traits are then defined to enable access to
  * properties in usual, static way.
+ *
+ * 在抽象文档模式中，({@link AbstractDocument})完全实现了{{@link Document}))接口。
+ * 然后定义 static，以支持以通常的静态方式访问属性。
  */
 public class App {
 
